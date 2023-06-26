@@ -25,6 +25,11 @@ Route::group(['middleware'=>['auth','admin']], function(){
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
     });
+
+    Route::get('/contact', 'FrontendController@contact')->name('contact');
+    Route::get('/user-list','UserController@index')->name('users.index');
+
+    Route::delete('/user/{id}', 'UserController@destroy')->name('users.destroy');
 });
 //Accountant Middleware
 Route::group(['middleware'=>['auth','accountant']], function (){

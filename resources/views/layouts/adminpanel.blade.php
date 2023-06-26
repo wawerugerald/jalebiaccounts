@@ -31,10 +31,10 @@
           </button>
         </div>
         <div>
-          <a class="navbar-brand brand-logo" href="../../index.html">
+          <a class="navbar-brand brand-logo" href="/dashboard">
             <img src="{{asset('images/logo.svg')}}" alt="logo" />
           </a>
-          <a class="navbar-brand brand-logo-mini" href="../../index.html">
+          <a class="navbar-brand brand-logo-mini" href="/dashboard">
             <img src="{{asset('images/logo-mini.svg')}}" alt="logo" />
           </a>
         </div>
@@ -170,7 +170,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#">
               <i class="mdi mdi-grid-large menu-icon"></i>
-              <span class="menu-title">Metrics</span>
+              <span class="menu-title">Dashboard</span>
             </a>
           </li>
           {{-- <li class="nav-item nav-category">UI Elements</li>
@@ -240,7 +240,6 @@
             </div>
           </li>
           @endif
-
       
           @if(Auth::user()->user_role == 'admin') 
           <li class="nav-item nav-category">User Management</li>
@@ -252,7 +251,7 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="#"> Users</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{route('users.index')}}"> Users</a></li>
               </ul>
             </div>
           </li>
