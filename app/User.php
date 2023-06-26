@@ -25,7 +25,10 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Company::class);
     }
-
+    public function getLastLoggedInAttribute()
+    {
+        return $this->last_logged_in ?? null;
+    }
     /**
      * The attributes that should be hidden for arrays.
      *

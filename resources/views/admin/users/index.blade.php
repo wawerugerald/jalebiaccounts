@@ -35,7 +35,7 @@
                                     <button type="submit" class="btn btn-danger">Delete</button>
                                 </form>
                             </td>
-                            <td>last login</td>
+                            <td>{{ $user->last_logged_in ? $user->last_logged_in->format('Y-m-d H:i:s') : 'N/A' }}</td>
                           </tr>
                           @endforeach
                       </tbody>
