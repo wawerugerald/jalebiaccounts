@@ -29,6 +29,9 @@ Route::group(['middleware'=>['auth','admin']], function(){
     Route::get('/contact', 'FrontendController@contact')->name('contact');
     Route::get('/user-list','UserController@index')->name('users.index');
 
+    Route::get('/users/{user}/edit', [UserController::class, 'edit'])->name('users.edit');
+    Route::put('/users/{user}', [UserController::class, 'update'])->name('users.update');
+
     Route::delete('/user/{id}', 'UserController@destroy')->name('users.destroy');
 });
 //Accountant Middleware

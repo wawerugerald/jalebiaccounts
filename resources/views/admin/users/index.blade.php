@@ -28,7 +28,7 @@
                             <td>{{$user->email}}</td>
                             <td><label class="badge badge-danger">Pending</label></td>
                             <td>
-                                <a href="#" class="btn btn-primary">Update</a>
+                                <a href="#" class="btn btn-primary">edit</a>
                                 <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display: inline">
                                     @csrf
                                     @method('DELETE')

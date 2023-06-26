@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends Authenticatable
 {
-    use SoftDeletes;
+  
     use Notifiable;
 
     /**
@@ -18,8 +18,13 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name','phone_number','email', 'password',
+        'first_name', 'last_name','company_id','phone_number','email', 'password',
     ];
+
+    public function company()
+    {
+        return $this->belongsTo(Company::class);
+    }
 
     /**
      * The attributes that should be hidden for arrays.
