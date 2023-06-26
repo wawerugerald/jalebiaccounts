@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## Accounting Platform
+## Jalebi SaaS Accounting Platform
 
 This is an accounting platform currently being built using Laravel, designed specifically for startups, MSMEs (Micro, Small, and Medium Enterprises), and individual users. The platform focuses on providing features related to balance sheets, trading profit and loss accounts, and other essential accounting functionalities. This README file will guide you through the installation and usage of the accounting platform.
 
