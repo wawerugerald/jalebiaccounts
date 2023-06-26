@@ -16,10 +16,11 @@ class CreateCompaniesTable extends Migration
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
             $table->string('company_name');
+            $table->string('no_Staff');
+            $table->string('email');
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *
