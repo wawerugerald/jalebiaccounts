@@ -20,8 +20,7 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
-   
+    use AuthenticatesUsers;   
     /**
      * Where to redirect users after login.
      *
@@ -32,14 +31,14 @@ class LoginController extends Controller
     protected function redirectTo()
     {
         if (Auth::user()->user_role == 'admin') {
-            # code...
             return 'dashboard';
-        } else {
             # code...
-            
+        } elseif (Auth::user()->user_role == 'accountant'){
+            # code...
+            return 'accdashboard';
+        }else{
             return 'home';
-        }
-        
+        }         
     }
     /**
      * Create a new controller instance.

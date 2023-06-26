@@ -4,8 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
-
-class AdminMiddleware
+class AccountantMiddleware
 {
     /**
      * Handle an incoming request.
@@ -16,12 +15,14 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::user()->user_role == 'admin') {
-            # code...
-            return $next($request);
-        } else {
-            # code...
-            return redirect('/home');
-        }            
+        {
+            if (Auth::user()->user_role == 'accountant') {
+                # code...    
+                return $next($request);    
+            } else {
+                # code...
+                return redirect('/home');
+            }      
+        }
     }
 }
