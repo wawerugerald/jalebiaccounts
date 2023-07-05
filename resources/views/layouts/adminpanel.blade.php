@@ -213,19 +213,19 @@
               </ul>
             </div>
           </li> --}}
-          {{-- <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
-              <i class="menu-icon mdi mdi-table"></i>
-              <span class="menu-title">Tables</span>
+              <i class="menu-icon mdi mdi-airballoon"></i>
+              <span class="menu-title">Companies</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="tables">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/tables/basic-table.html">Basic table</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../../pages/tables/basic-table.html">SMEs</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../../pages/tables/basic-table.html">Startups</a></li>
               </ul>
             </div>
-          </li> --}}
-          
+          </li>      
           @if(Auth::user()->user_role == 'accountant')
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
@@ -239,8 +239,7 @@
               </ul>
             </div>
           </li>
-          @endif
-      
+          @endif      
           @if(Auth::user()->user_role == 'admin') 
           <li class="nav-item nav-category">User Management</li>
           <li class="nav-item">
@@ -265,8 +264,6 @@
           </li> --}}
         </ul>
       </nav>
-
-
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
@@ -284,9 +281,6 @@
       </div>
       <!-- main-panel ends -->
     </div>
-
-
-
     <!-- page-body-wrapper ends -->
   </div>
 <!-- container-scroller -->
