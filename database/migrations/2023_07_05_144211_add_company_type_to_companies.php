@@ -18,7 +18,6 @@ class AddCompanyTypeToCompanies extends Migration
             $table->string('company_type')->nullable();
         });
     }
-
     /**
      * Reverse the migrations.
      *

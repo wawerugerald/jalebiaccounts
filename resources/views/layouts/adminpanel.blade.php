@@ -213,6 +213,7 @@
               </ul>
             </div>
           </li> --}}
+          @if(Auth::user()->user_role == 'admin')
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
               <i class="menu-icon mdi mdi-airballoon"></i>
@@ -225,7 +226,8 @@
                 <li class="nav-item"> <a class="nav-link" href="../../pages/tables/basic-table.html">Startups</a></li>
               </ul>
             </div>
-          </li>      
+          </li>
+          @endif      
           @if(Auth::user()->user_role == 'accountant')
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
